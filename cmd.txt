@@ -1,0 +1,13 @@
+{$CLEO}
+{$NOSOURCE}
+0000:
+
+:Label
+wait 0
+0AFA:  is_samp_available
+jf @Label
+0B34: samp register_client_command "LoL" to_label @LoL
+0BDE: pause_thread 0
+
+:LoL
+0B43: samp cmd_ret
